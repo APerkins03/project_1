@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Princess Dash</title>
+  </head>
+  <body>
+    <main>
+
+      <div id="start-screen">
+        <h1>Princess Dash</h1> 
+        <img src="./images/princessmain.webp" alt="princesses" class="princesses-img" />
+        <br/>
+        <button id="start-button">Start Game</button>
+        <p>Use the left and right arrows to move the Princess!</p>
+        <p>Collect the crowns 👑  but be careful not to touch the frogs 🐸 </p>
+
+      </div>
+
+
+
+
+      <div id="game-container">
+        <div>
+          <h2>Score:</h2>
+          <p>Crowns: <span id="score">0</span></p>
+          <p>Lives: <span id="lives">3</span></p>
+        </div>
+        <div id="game-screen"></div>
+      </div>
+
+
+
+
+      <div id="game-end">
+        <img src="./images/princessmain.webp" alt="" class="princesses-img" />
+        <h1>Game Over</h1>
+        <br />
+        <button id="restart-button">Restart</button>
+      </div>
+
+    </main>
+
+
+
+
+    <script type="text/javascript" src="js/obstacle.js"></script>
+    <script type="text/javascript" src="js/player.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+  </body>
+
+</html>
