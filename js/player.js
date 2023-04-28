@@ -7,6 +7,8 @@ class Player {
     this.height = height;
     this.directionX = 0;
     this.directionY = 0;
+    this.step = 70;
+    this.speed = 160;
 
     this.element = document.createElement("img");
     this.element.src = imgSrc;
@@ -22,9 +24,10 @@ class Player {
   }
 
   move() {
+
     // Update player's position based on directionX and directionY
     this.left += this.directionX;
-    this.top += this.directionY;
+  
     
 
     // sets boundary to left hand side
@@ -34,8 +37,8 @@ class Player {
 
 
     // sets boundary to right hand side
-    if(this.left + this.width > this.gameScreen.offsetWidth - 50){
-      this.left = this.gameScreen.offsetWidth - this.width - 50;
+    if(this.left + this.width > this.gameScreen.offsetWidth - 10){
+      this.left = this.gameScreen.offsetWidth - this.width - 10;
     }
   
 
@@ -57,7 +60,7 @@ class Player {
       playerRect.top < obstacleRect.bottom &&
       playerRect.bottom > obstacleRect.top
     ){
-      console.log("");
+ 
       return true
     } else {
       return false;

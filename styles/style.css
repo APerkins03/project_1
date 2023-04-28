@@ -19,12 +19,22 @@ body {
   color: #f013b9;
   font-size: 60px;
   font-family: "Verdana";
+  text-align: center;
 }
 #start-screen p {
-  font-size: 22px;
+  font-size: 20px;
+  font-family: "Verdana";
+  justify-content: center;
+}
+#game-container {
+  align-content: center;
+}
+#player-name {
+  text-align: center;
+  color: #f013b9;
+  font-size: 30px;
   font-family: "Verdana";
 }
-
 
 
 
@@ -49,8 +59,9 @@ body button {
 #game-container {
   display: flex;
   width: 100vw;
-  padding: 20px 0px;
+  padding: 10px 0px;
   justify-content: center;
+  font-size: 25px;
 }
 
 
@@ -64,7 +75,6 @@ body button {
   position: relative;
   background-image: url(../images/castle.webp);
   background-size: cover;
-
 
 }
 
