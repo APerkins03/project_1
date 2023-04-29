@@ -6,21 +6,22 @@ class Game {
     this.gameScore = document.getElementById("score");
     this.gameLives = document.getElementById("lives");
     this.player = new Player( // gameScreen, left, top, width, height, imgSrc
-      this.gameScreen,
-      200,
-      700,
-      150,
-      150,
-      "./images/princess.png"
-    );
+    this.gameScreen,
+    200,
+    700,
+    150,
+    150,
+    "./images/princess.png"
+  );
+
     this.height = 800;
-    this.width = 600;
+    this.width = 800;
     this.obstacles = [];
     this.score = 0;
     this.lives = 3;
     this.gameIsOver = false;
-    this.obstacleSpeed = 6;
-    this.obstacleInterval = 1500;
+    this.obstacleSpeed = 0.5;
+    this.obstacleInterval = 10000;
   }
 
   start() {
@@ -75,7 +76,7 @@ class Game {
             this.gameScore.innerText = this.score;
         }else if(obstacle.type === "obstacle4"){
           this.lives -= 3;
-          this.gameLives.innerText = this.lives;
+          this.gameLives.innerText = this.lives < 0 ? 0 : this.lives;
         }
         obstacle.element.remove();
         this.obstacles.splice(i, 1);
@@ -93,17 +94,17 @@ class Game {
       this.obstacles.push(new Obstacle(this.gameScreen, type))
     }
 
-    if (this.score > 20 && this.obstacleSpeed < 40) {
-      this.obstacleSpeed = 40;
+    if (this.score > 100 && this.obstacleSpeed < 5) {
+      this.obstacleSpeed = 5;
     }
-    if (this.score > 40 && this.obstacleInterval > 50) {
-      this.obstacleInterval = 50;
+    if (this.score > 100 && this.obstacleInterval > 5000) {
+      this.obstacleInterval = 5000;
     }
-    if (this.score > 60 && this.obstacleSpeed < 80) {
-      this.obstacleSpeed = 80
+    if (this.score > 150 && this.obstacleSpeed < 10) {
+      this.obstacleSpeed = 10
     }
-    if (this.score > 80 && this.obstacleInterval > 75) {
-      this.obstacleInterval = 75;
+    if (this.score > 150 && this.obstacleInterval > 3000) {
+      this.obstacleInterval = 3000;
     }
     }
   

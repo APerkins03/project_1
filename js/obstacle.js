@@ -37,7 +37,7 @@ class Obstacle {
   
   move() {
     // Move the obstacle down by 3px
-    this.top += 7; 
+    this.top += 4; 
         // sets boundary to left hand side
         if(this.left < 20){
           this.left = 20;
@@ -61,14 +61,14 @@ class Obstacle {
     const randomObstacle = this.obstacleTypes[randomIndex];
   
     let numObstaclesToDrop = 1;
-    if (this.player.score >= 50) {
-      numObstaclesToDrop = 4;
-    }
     if (this.player.score >= 100) {
-      numObstaclesToDrop = 6;
+      numObstaclesToDrop = 2;
     }
     if (this.player.score >= 150) {
-      numObstaclesToDrop = 8;
+      numObstaclesToDrop = 3;
+    }
+    if (this.player.score >= 200) {
+      numObstaclesToDrop = 4;
     }
   
     for (let i = 0; i < numObstaclesToDrop; i++) {

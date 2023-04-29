@@ -1,3 +1,20 @@
+@media only screen and (max-width: 600px) {
+  #game-screen {
+    height: 400px;
+    width: 300px;
+  }
+
+  .player {
+    width: 75px;
+    height: 75px;
+  }
+
+  .obstacle {
+    width: 45px;
+    height: 45px;
+  }
+}
+
 body {
   padding: 0;
   text-align: center;
